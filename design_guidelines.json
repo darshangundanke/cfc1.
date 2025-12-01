@@ -1,0 +1,118 @@
+{
+  "identity": {
+    "name": "Kamch Aam Parikshan",
+    "persona": "E1: The Anti-AI Designer",
+    "tone": "Modern Ayurveda - Fusion of Ancient Wisdom & Digital Clarity",
+    "aesthetic": "Organic & Earthy with Electric Accents",
+    "description": "A vibrant, modern health assessment tool that bridges traditional Ayurvedic diagnosis with contemporary digital design. It avoids the dusty, beige stereotypes of Ayurveda in favor of fresh greens, turmeric oranges, and clean typography."
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Playfair Display, serif",
+      "body": "Manrope, sans-serif"
+    },
+    "import_url": "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap",
+    "rules": [
+      "Use Playfair Display for all H1, H2, H3 headings to evoke trust and tradition.",
+      "Use Manrope for all body text, UI elements, and data displays for maximum readability.",
+      "Headings must use tight tracking (tracking-tight).",
+      "Overlines/Labels must be uppercase with wide tracking (tracking-widest)."
+    ]
+  },
+  "colors": {
+    "palette": {
+      "primary": "#1A4D2E",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#FF9F1C",
+      "secondary_foreground": "#1F2937",
+      "accent": "#E8F3E8",
+      "accent_foreground": "#1A4D2E",
+      "background": "#F9FAFB",
+      "foreground": "#1F2937",
+      "muted": "#F3F4F6",
+      "muted_foreground": "#6B7280",
+      "border": "#E5E7EB",
+      "input": "#E5E7EB",
+      "ring": "#1A4D2E",
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444"
+    },
+    "usage": [
+      "Primary (Deep Forest Green): Main buttons, active states, key headings.",
+      "Secondary (Turmeric Orange): Call-to-actions, highlights, 'Modern' accents.",
+      "Background: Off-white/Sage tint (Never pure white #FFFFFF, use #F9FAFB).",
+      "Text: Charcoal (#1F2937) for body, Deep Green (#1A4D2E) for headings.",
+      "Gradients: Minimal usage. Only subtle 'glows' behind hero images."
+    ]
+  },
+  "visual_enhancers": {
+    "radius": "0.75rem",
+    "shadows": {
+      "card": "0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)",
+      "hover": "0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025)"
+    },
+    "textures": "Use subtle grain or noise overlays on solid color backgrounds to add depth.",
+    "glassmorphism": "Use backdrop-blur-md with bg-white/80 for sticky headers and modal overlays."
+  },
+  "layout_strategies": {
+    "landing_page": {
+      "type": "Tetris Grid",
+      "description": "Asymmetrical grid mixing hero text, herbal imagery, and yoga visuals.",
+      "structure": "grid-cols-1 md:grid-cols-12 gap-6"
+    },
+    "assessment_form": {
+      "type": "Focused Card",
+      "description": "Single column, centered card layout to reduce cognitive load.",
+      "structure": "max-w-2xl mx-auto"
+    },
+    "results_page": {
+      "type": "Bento Grid",
+      "description": "Grid of cards displaying score, interpretation, and specific advice categories.",
+      "structure": "grid-cols-1 md:grid-cols-3 gap-6"
+    },
+    "admin_panel": {
+      "type": "Control Room",
+      "description": "Sidebar navigation + Dense data table area.",
+      "structure": "flex h-screen"
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Pill-shaped or Rounded-lg",
+      "animation": "transform transition-all active:scale-95 hover:shadow-lg"
+    },
+    "cards": {
+      "style": "bg-white border border-border/50 shadow-sm hover:shadow-md transition-shadow",
+      "padding": "p-6 or p-8"
+    },
+    "inputs": {
+      "style": "bg-white border-input focus:ring-2 focus:ring-primary/20 transition-all"
+    }
+  },
+  "image_urls": {
+    "hero_herbs": "https://images.unsplash.com/photo-1648780693936-99d2ca3d3910?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "hero_yoga": "https://images.unsplash.com/photo-1761971975047-6426232852ed?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "ingredients": "https://images.unsplash.com/photo-1589556165541-4254aa9cfb39?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "doctor_consult": "https://images.unsplash.com/photo-1659353888906-adb3e0041693?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "logo_placeholder": "https://placehold.co/200x80/1A4D2E/FFFFFF?text=KAMCH"
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL FONTS: Add the Google Fonts import to index.css immediately.",
+    "2. CONFIGURE TAILWIND: Update tailwind.config.js with the specific color palette provided.",
+    "3. BUILD LANDING: Use the 'Tetris Grid' layout. Do not make a generic bootstrap hero.",
+    "4. BUILD FORM: Implement the 14-question logic with auto-scoring. Use a progress bar.",
+    "5. BUILD RESULTS: The result page must be visually rich. Use icons for Dincharya, Rutucharya, etc.",
+    "6. BUILD ADMIN: Secure login (admin_kamch). Table must support sorting and CSV export.",
+    "7. SCORING LOGIC: 14-28 (Not Present), 29-42 (Slightly Present), 43-70 (Present).",
+    "8. CONTACT: Display 'Kamch Consultancy' details prominently on the result page.",
+    "9. DATA-TESTID: Add data-testid to all interactive elements (buttons, inputs, cards)."
+  ],
+  "universal_guidelines": [
+    "Do not use generic gradients.",
+    "Ensure 4.5:1 contrast ratio for text.",
+    "Use 2x more whitespace than you think is necessary.",
+    "Animations should be 'springy' and 'smooth', not linear.",
+    "Never use 'Inter' font for headings."
+  ]
+}
